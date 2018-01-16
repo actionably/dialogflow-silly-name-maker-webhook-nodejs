@@ -24,7 +24,7 @@ generate a silly name based on your lucky number and favorite color.
 1. Click *View* to open the Actions on Google simulator.
 1. Type `Talk to my test app` in the simulator, or say `OK Google, talk to my test app` to any Actions on Google enabled device signed into your developer account.
 
-**Note: To use dashbot on firebase when you must have entered a credit card for Google Cloud**
+**Note: To use dashbot on firebase when you must have entered a credit card for Google Cloud and linked this firebase project to this billing account.**
 
 For more detailed on dashbot, see the [dashbot documentation](https://www.dashbot.io/docs).
 
