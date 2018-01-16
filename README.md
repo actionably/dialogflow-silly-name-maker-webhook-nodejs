@@ -1,4 +1,4 @@
-# Actions on Google: Silly Name Maker Sample using Node.js and Cloud Functions for Firebase
+# Actions on Google: Silly Name Maker Sample using Node.js and Cloud Functions for Firebase including Dashbot integration
 
 This is a super simple Assistant app, built using Dialogflow and Node.js, to
 generate a silly name based on your lucky number and favorite color.
@@ -6,6 +6,9 @@ generate a silly name based on your lucky number and favorite color.
 ## Setup Instructions
 
 ### Steps
+1. Create an account on [https://www.dashbot.io](https://www.dashbot.io)
+1. Create a google bot on dashbot.io (make note of the API_KEY)
+1. Substitute the API_KEY created above for REPLACE_WITH_YOUR_DASHBOT_API_KEY in functions/index.js 
 1. Use the [Actions on Google Console](https://console.actions.google.com) to add a new project with a name of your choosing.
 1. Under *Build a custom app*, click *BUILD* in the Dialogflow box and then click *Create Actions on Dialogflow*.
 1. Click *Save* to save the project.
@@ -21,7 +24,20 @@ generate a silly name based on your lucky number and favorite color.
 1. Click *View* to open the Actions on Google simulator.
 1. Type `Talk to my test app` in the simulator, or say `OK Google, talk to my test app` to any Actions on Google enabled device signed into your developer account.
 
+**Note: To use dashbot on firebase when you must have entered a credit card for Google Cloud**
+
+For more detailed on dashbot, see the [dashbot documentation](https://www.dashbot.io/docs).
+
 For more detailed information on deployment, see the [documentation](https://developers.google.com/actions/dialogflow/deploy-fulfillment).
+
+### Testing locally
+
+1. Install [ngrok](https://ngrok.com/)
+1. Run ngrok ```ngrok http 5000``` 
+1. Go back to the Dialogflow console and select *Fulfillment* from the left navigation menu. Enable *Webhook*, set the value of *URL* to the ngrok url from the previous step, then click *Save*.
+1. ```cd functions```
+1. ```npm install```
+1. ```npm start```
 
 ## References and How to report bugs
 * Actions on Google documentation: [https://developers.google.com/actions/](https://developers.google.com/actions/).

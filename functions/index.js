@@ -16,6 +16,7 @@
 process.env.DEBUG = 'actions-on-google:*';
 const { DialogflowApp } = require('actions-on-google');
 const functions = require('firebase-functions');
+const dashbot = require('dashbot')('REPLACE_WITH_YOUR_DASHBOT_API_KEY').google;
 
 const NAME_ACTION = 'make_name';
 const COLOR_ARGUMENT = 'color';
@@ -23,6 +24,8 @@ const NUMBER_ARGUMENT = 'number';
 
 exports.sillyNameMaker = functions.https.onRequest((request, response) => {
   const app = new DialogflowApp({request, response});
+  dashbot.configHandler(app);
+
   console.log('Request headers: ' + JSON.stringify(request.headers));
   console.log('Request body: ' + JSON.stringify(request.body));
 
