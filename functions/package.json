@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "actions-on-google": "^1.5.0",
-    "dashbot": "9.4.2",
+    "dashbot": "^9.4.3",
+    "dotenv": "^4.0.0",
     "firebase-admin": "^4.2.1",
     "firebase-functions": "^0.5.7"
   },

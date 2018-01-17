@@ -12,6 +12,7 @@
 // limitations under the License.
 
 'use strict';
+require('dotenv').config();
 
 process.env.DEBUG = 'actions-on-google:*';
 const { DialogflowApp } = require('actions-on-google');
